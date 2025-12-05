@@ -15,8 +15,6 @@ exibirMensagemInicial();
 function verificarChute() {
     tentativas++;
     let chute = document.querySelector('input').value;
-
-    console.log(chute == numeroSecreto);
     if (chute == numeroSecreto) {
 
         let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
@@ -49,7 +47,6 @@ function gerarNumeroAleatorio() {
         return gerarNumeroAleatorio();
     } else {
         listaDeNumerosSorteados.push(numeroEscolhido);
-        console.log(listaDeNumerosSorteados)
         return numeroEscolhido;
     }
 }
@@ -70,4 +67,5 @@ function reiniciarJogo() {
 function exibirMensagemInicial() {
     manipularHtml('h1', 'Jogo do Número Secreto');
     manipularHtml('p', 'Escolha um número entre 1 e 10');
+
 }
