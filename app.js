@@ -38,7 +38,7 @@ function verificarChute() {
 }
 
 function gerarNumeroAleatorio() {
-     let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
+    let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
     let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
 
     if (quantidadeDeElementosNaLista == numeroLimite) {
@@ -67,5 +67,5 @@ function reiniciarJogo() {
 
 function exibirMensagemInicial() {
     manipularHtml('h1', 'Jogo do Número Secreto');
-    manipularHtml('p', 'Escolha um número entre 1 e 100');
+    manipularHtml('p',  `Escolha um número entre 1 e ${numeroLimite}`);
 }
